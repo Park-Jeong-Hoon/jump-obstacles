@@ -1,7 +1,27 @@
-#game {
+body {
     margin: 0;
-    padding: 0;
+}
+
+#game {
     width: 1000px;
     height: 500px;
     background-color: aliceblue;
+    position: absolute;
+}
+
+#player {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 450px;
+}
+
+#obstacle {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top: 450px;
+    left: 950px;
 }
