@@ -7,6 +7,8 @@ body {
     height: 500px;
     background-color: aliceblue;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 @keyframes jump {
@@ -39,4 +41,8 @@ body {
     top: 450px;
     left: 950px;
     animation: goLeft 2s infinite linear;
+}
+
+#score {
+    text-align: center;
 }
