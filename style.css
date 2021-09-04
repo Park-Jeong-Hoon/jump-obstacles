@@ -38,5 +38,5 @@ body {
     position: absolute;
     top: 450px;
     left: 950px;
-    animation: goLeft 1s;
+    animation: goLeft 2s infinite linear;
 }
