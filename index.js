@@ -1,6 +1,8 @@
 const game = document.getElementById("game");
 const player = document.getElementById("player");
 const obstacle = document.getElementById("obstacle");
+const score = document.querySelector("#score h1");
+let sc = 0; //플레이어 점수
 
 function jumping() {
     //player의 classList에 jumping-animation이 없으면 추가해서 player가 점프를 하도록 한다.
@@ -21,10 +23,19 @@ function collision() { //충돌할 경우
     if(playerTop >= 400 && obstacleLeft > -50 && obstacleLeft < 50) { //충돌이 일어날 수 있는 위치값으로 조건문을 만든다.
         obstacle.style.animation = "none";
         obstacle.style.display = "none";
-        alert("game over");
+        //score.style.display = "none";
+        clearInterval(interval); //setInterval을 멈춤
+        alert(`your score: ${sc}, press F5 to restart game`);
     }
+}
+
+function plus() { //점수 증가
+    score.innerText = sc;
+    sc += 1;
 }
 
 game.addEventListener("click", jumping);
 
 setInterval(collision, 10);
+
+const interval = setInterval(plus, 100);
