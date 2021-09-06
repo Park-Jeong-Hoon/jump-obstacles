@@ -1,3 +1,7 @@
+:root { /*css 내에서의 변수*/
+    --ob-color: "red";
+}
+
 body {
     margin: 0;
 }
@@ -36,7 +40,7 @@ body {
 #obstacle {
     width: 50px;
     height: 50px;
-    background-color: red;
+    background-color: var(--ob-color);
     position: absolute;
     top: 450px;
     left: 950px;
