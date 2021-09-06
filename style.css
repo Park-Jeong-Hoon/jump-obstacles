@@ -1,5 +1,5 @@
 :root { /*css 내에서의 변수*/
-    --ob-color: "red";
+    --ob-color: red;
 }
 
 body {
